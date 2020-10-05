@@ -10,7 +10,7 @@ public class PopulatingNextRightPointersinEachNode {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		LCStringtoTreeNode.stringToTreeNode("[5,3,6,2,4,null,null,1]");
+		LCStringtoTreeNode.stringToTreeNode("[1,2,3,4,null,null,5]");//"[5,3,6,2,4,null,null,1]");
 		
 
 	}
