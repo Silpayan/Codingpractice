@@ -1,5 +1,6 @@
 package pramp;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -31,7 +32,67 @@ output: -1
  */
 public class ShortestPathinGrid {
 	
-	  static int shortestCellPath(int[][] grid, int sr, int sc, int tr, int tc) {
+	static int shortestCellPath(int[][] grid, int sr, int sc, int tr, int tc) {
+		// your code goes here
+    
+    //start at sr,sc 
+    //BFS 
+    //poitn[0] == sr point == sc return level
+    //BFS gurantees
+    
+    Queue<int[]> bfsQ = new LinkedList<>();
+    
+    bfsQ.add(new int[]{sr,sc});
+    
+    int [][]dirs = {{0,-1}, {0,1},{-1,0},{1,0}};
+    int level = 0; 
+    
+    //System.out.println(level+", "+bfsQ);
+    
+    while(!bfsQ.isEmpty()){
+      
+      int size = bfsQ.size();
+      
+      for(int i = 0; i< size; i++){
+        int point[] = bfsQ.poll();
+        
+        //System.out.println(Arrays.toString(point));
+        
+        if(point[0] == tr && point[1] == tc){
+          return level;
+        }
+        
+        //System.out.println(level+", "+bfsQ);
+        
+        grid[point[0]][point[1]] = 0;
+        
+        for(int dir[]: dirs){
+          
+          int newSr = point[0]+dir[0], newSc = point[1]+dir[1];
+          
+          if(isValid(grid, newSr, newSc)){
+            bfsQ.add(new int[]{newSr, newSc});
+          }
+        }
+        
+      }
+      
+      //if(bfsQ.size()>0){
+        level++;
+      //System.out.println(level+", "+bfsQ);
+      //}
+      
+    }
+    
+    return -1;
+	}
+  
+  private static boolean isValid(int[][] grid, int r, int c){
+    
+    return r>=0 && r<grid.length && c>=0 && c<grid[0].length && grid[r][c] ==1;
+  }
+
+	  static int shortestCellPathCopied(int[][] grid, int sr, int sc, int tr, int tc) {
 			// your code goes here
 	    int[][] dirs = {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 	    Queue<Point> path = new LinkedList<>();

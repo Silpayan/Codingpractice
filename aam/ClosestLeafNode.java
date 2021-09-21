@@ -1,5 +1,7 @@
 package aam;
 
+import java.util.*;
+
 public class ClosestLeafNode {
 
 	public static void main(String[] args) {
@@ -11,10 +13,10 @@ public class ClosestLeafNode {
         if(root == null || target == null) {
             return null;
         }
-        Map mapping = new HashMap();
+        Map<TreeNode, List<TreeNode>> mapping = new HashMap();
         buildAdjList(mapping, root, null);
 
-        Queue queue = new LinkedList();
+        Queue<TreeNode> queue = new LinkedList();
         Set visited = new HashSet();
 
         for (TreeNode node: mapping.keySet()) {
