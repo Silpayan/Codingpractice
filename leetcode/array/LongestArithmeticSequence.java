@@ -20,7 +20,7 @@ B is arithmetic if B[i+1] - B[i] are all the same value (for 0 <= i < B.length -
 	
 	public static int longestArithSeqLength(int[] A) {
 		
-		Try self
+		//Try self
 		 Map<Integer, Map<Integer, Integer>> map = new HashMap<>();
 	        int res = 1;
 	        int n = A.length;

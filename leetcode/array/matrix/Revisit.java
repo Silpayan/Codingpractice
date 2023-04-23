@@ -29,7 +29,9 @@ public class Revisit {
 	private static void rotate90(int[][] mat) {
 
 		for(int layer = 0; layer<=mat.length/2 ; layer++) {
-			for(int col = 0; col<mat[0].length)
+			for(int col = 0; col<mat[0].length; col++){
+
+			}
 		}
 	}
 

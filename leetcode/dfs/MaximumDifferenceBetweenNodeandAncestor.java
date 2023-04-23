@@ -1,4 +1,4 @@
-package leetcode.bfs_dfs;
+package leetcode.dfs;
 
 import leetcode.tree.ConvertSortedArraytoBinarySearch;
 import leetcode.tree.LCStringtoTreeNode;
@@ -33,7 +33,7 @@ public class MaximumDifferenceBetweenNodeandAncestor {
 
 	
 	public static int maxAncestorDiff(TreeNode node, int min, int max){
-		***Nije koro***
+		/***Nije koro***/
 		
 	      min = Math.min(node.val, min);
 	      max = Math.max(node.val, max);

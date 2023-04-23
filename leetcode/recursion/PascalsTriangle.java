@@ -9,7 +9,7 @@ public class PascalsTriangle {
 		
 		System.out.println(generate(1, 2, null));
 	}
-	Hoyni
+	//Hoyni
 public static List<List<Integer>> generate(int currentRowNum, int numRows,List<List<Integer>> result) {
 	//List<List<Integer>> result=new ArrayList<List<Integer>>();;
 	List<Integer> currentRow=new ArrayList<Integer>();

@@ -14,7 +14,7 @@ public class RotatethematrixrightbyKtimes {
 		// display rotated matrix
 		displayMatrix(matrix);
 	}
-Wrong
+//Wrong
 	// function to rotate matrix by k times
 	static void rotateMatrix(int matrix[][], int k) {
 		// temporary array of size M
