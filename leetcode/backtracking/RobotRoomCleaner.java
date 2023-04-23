@@ -1,5 +1,10 @@
 package leetcode.backtracking;
 
+import com.sun.tools.javac.util.Pair;
+
+import java.util.HashSet;
+import java.util.Set;
+
 /*
  * 489. Robot Room Cleaner
 Hard
@@ -47,6 +52,21 @@ The robot initially starts at the position of row=1, col=3.
 From the top left corner, its position is one row below and three columns right.
  * 
  */
+
+interface Robot {
+	// returns true if next cell is open and robot moves into the cell.
+	// returns false if next cell is obstacle and robot stays on the current cell.
+	boolean move();
+
+	// Robot will stay on the same cell after calling turnLeft/turnRight.
+	// Each turn will be 90 degrees.
+	void turnLeft();
+	void turnRight();
+
+	// Clean the current cell.
+	void clean();
+}
+
 public class RobotRoomCleaner {
 
 	public static void main(String[] args) {
@@ -58,7 +78,7 @@ public class RobotRoomCleaner {
 		        {0,0,0,1,0,0,0,0},
 		        {1,1,1,1,1,1,1,1}};
 		int row = 1,
-	      col = 3  
+	      col = 3;
 
 	}
 	

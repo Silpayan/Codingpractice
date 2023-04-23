@@ -60,7 +60,7 @@ public class FrogJump {
 		for(int i=1; i<stones.length;i++) {
 			int jump = stones[i]-stones[prevStone];
 			if(jump==prevJump - 1 || jump==prevJump || jump== prevJump + 1) {
-				not working
+				//not working
 			} else 
 			{
 				canJump=false;
