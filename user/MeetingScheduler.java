@@ -11,7 +11,7 @@ class MeetingRoom {
 
     private final String meetingRoomId;
 
-    private final TreeMap<LocalDateTime, LocalDateTime> calendar;
+    private final TreeMap<LocalDateTime, LocalDateTime> calendar;  // K = start ,V = end
 
     public MeetingRoom(String meetingRoomId) {
         this.meetingRoomId = meetingRoomId;
@@ -19,7 +19,7 @@ class MeetingRoom {
     }
 
     public String scheduleMeeting(LocalDateTime start, LocalDateTime end) {
-        LocalDateTime before = calendar.lowerKey(end);
+        LocalDateTime before = calendar.lowerKey(end); //Returns the greatest key strictly less than the given key, or null if there is no such key.
         if (null != before && calendar.get(before).isAfter(start)) {
             return null;
         }
