@@ -1,5 +1,8 @@
 package leetcode.dfs;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CourseSchedule {
 
 	public static void main(String[] args) {

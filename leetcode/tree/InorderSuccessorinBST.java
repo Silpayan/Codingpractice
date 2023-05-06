@@ -65,7 +65,7 @@ public class InorderSuccessorinBST {
 	      } else {
 	        n=inputNode.parent;
 	        while(n!=null){
-	          if(n.key>inputNode.key){
+	          if(n.val>inputNode.val){
 	            return n;
 	          } else {
 	            n=n.parent;

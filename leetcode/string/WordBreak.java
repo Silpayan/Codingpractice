@@ -12,8 +12,8 @@ public class WordBreak {
 		System.out.println(new WordBreak().wordBreak(s, wordDict));
 	}
 	
-    public boolean wordBreak(String s, List<String> wordDict) {
-        Set parts = Collections.synchronizedSet(new HashSet<String,String>());
+    public boolean wordBreak(String s, String[] wordDict) {
+        Set<String> parts = Collections.synchronizedSet(new HashSet<String>());
         
         for(String word:wordDict){
             

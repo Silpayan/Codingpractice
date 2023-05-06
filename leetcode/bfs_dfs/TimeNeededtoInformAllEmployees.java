@@ -33,10 +33,10 @@ public class TimeNeededtoInformAllEmployees {
     static Map<Integer,List<Integer>> adj = new HashMap<>();
     
 	
-public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
-	int orderofCources[] = new int[numCourses];
-    indegree = new int[numCourses];
-    for(int[] pr : prerequisites){//Creating the dependency Map/Graph
+public int[] numOfMinutes(int n, int headID, int[][] manager, int[] informTime) {
+	int orderofCources[] = new int[n];
+    indegree = new int[n];
+    for(int[] pr : manager){//Creating the dependency Map/Graph
         List<Integer> l =  adj.getOrDefault(pr[1], new ArrayList<>());
         l.add(pr[0]); 
         indegree[pr[0]]++;
@@ -62,7 +62,7 @@ public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
 
     }
 
-    return countCourse == numCourses?orderofCources:new int[0];
+    return countCourse == n?orderofCources:new int[0];
     }
 
 }
