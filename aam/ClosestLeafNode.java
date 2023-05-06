@@ -44,7 +44,7 @@ public class ClosestLeafNode {
         return null;
     }
 
-    public void buildAdjList(Map mapping, TreeNode node, TreeNode p) {
+    public void buildAdjList(Map<TreeNode, List<TreeNode>> mapping, TreeNode node, TreeNode p) {
         if (!mapping.containsKey(node)) {
             mapping.put(node, new ArrayList<>());
         }

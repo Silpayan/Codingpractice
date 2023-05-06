@@ -2,7 +2,6 @@ package leetcode.bfs_dfs;
 
 import java.util.LinkedList;
 import java.util.List;
-import javafx.util.Pair;
 
 /*
  * 339. Nested List Weight Sum
@@ -86,7 +85,7 @@ public class NestedListWeightSum {
 	
 	class Solution {
 	    
-	    public int depthSum(List<NestedInteger> nestedList) {
+	    /*public int depthSum(List<NestedInteger> nestedList) {
 	     
 	        int sum = 0;
 	        
@@ -118,7 +117,7 @@ public class NestedListWeightSum {
 	        }
 	        
 	        return sum;
-	    }
+	    }*/
 	}
 
 }

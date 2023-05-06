@@ -15,7 +15,7 @@ public class ConvertBinaryNumberinaLinkedListtoInteger {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println(getDecimalValue(head));
+		//System.out.println(getDecimalValue(head));
 	}
 	
 	public static int getDecimalValue(ListNode head) {

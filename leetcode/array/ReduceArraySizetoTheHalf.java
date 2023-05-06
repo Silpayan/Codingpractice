@@ -41,6 +41,7 @@ public int minSetSize(int[] arr) {
 	    */
 
 	    // keep k top frequent elements in the heap
+		int k = arr.length;
 	    for (Integer n: mnumFrq.keySet()) {
 	      sortedByFrq.add(n);
 	      if (sortedByFrq.size() > k)
@@ -55,5 +56,7 @@ public int minSetSize(int[] arr) {
 	    Collections.reverse(top_k);
 	    
 	    System.out.println(top_k);
+		return top_k.size();
     }
+
 }
