@@ -9,8 +9,15 @@ public class LightRemote {
         Remote r = new Remote();
 
         r.assignLight();
-        r.on();
-        r.off();
+        for(int i=0; i<7;i++) {
+            r.on(i);
+        }
+
+        System.out.println();
+
+        for(int i=0; i<7;i++) {
+            r.off(i);
+        }
     }
 
     /*
@@ -49,28 +56,36 @@ public class LightRemote {
 class Light {
 
     public void on() {
-        System.out.println("On");
+        System.out.print(" : On\n");
     }
 
     public void off() {
-        System.out.println("Off");
+        System.out.println(" : Off");
     }
 
 }
 
 class Remote {
 
-    Light light;
+    Light light[];
+    final int LIGHT_COUNT = 7;
 
     public void assignLight() {
-        light = new Light();
+        light = new Light[LIGHT_COUNT];//new Light();
+        for(int i=0; i<LIGHT_COUNT; i++){
+            light[i] = new Light();
+        }
+
     }
 
-    public void on() {
-        light.on();
+    public void on(int id) {
+        System.out.print(id);
+        light[id].on();
     }
 
-    public void off() {
-        light.off();
+    public void off(int id) {
+        System.out.print(id);
+        light[id].off();
+
     }
 }
