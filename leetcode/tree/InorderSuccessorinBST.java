@@ -63,7 +63,7 @@ public class InorderSuccessorinBST {
 	        return n;
 	        
 	      } else {
-	        n=inputNode.parent;
+	        n=inputNode.parent; //
 	        while(n!=null){
 	          if(n.val>inputNode.val){
 	            return n;
